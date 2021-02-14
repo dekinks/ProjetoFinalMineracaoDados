@@ -1,4 +1,4 @@
-# Projeto Final de Mineracao de Dados
+# Projeto Final de Mineração de Dados
 Código do projeto final da matéria de mineração de dados UFMG
 
 1 - Criar máscaras com o labelme</br>
@@ -11,4 +11,4 @@ Código do projeto final da matéria de mineração de dados UFMG
 
 3 - Criar as labels em .csv
 
-4 - Algoritmo de pre-processamento
+4 - Algoritmo de pré-processamento
