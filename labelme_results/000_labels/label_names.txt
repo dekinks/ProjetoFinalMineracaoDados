@@ -1,0 +1,8 @@
+_background_
+Dirt
+Gravel
+Obstacles
+Paved-area
+Person
+Tree
+Vegetation
