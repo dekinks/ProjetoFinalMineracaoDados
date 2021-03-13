@@ -1,5 +1,4 @@
 from PIL import Image
-import matplotlib.pyplot as plt
 from keras_segmentation.models.unet import vgg_unet
 
 def main():
@@ -19,20 +18,6 @@ def learning():
         inp=input_image,
         out_fname="out.png"
     )
-
-    fig, axs = plt.subplots(1, 2, figsize=(20, 20), constrained_layout=True)
-
-    img_orig = Image.open(input_image)
-    axs[0].imshow(img_orig)
-    axs[0].set_title('original image-002.jpg')
-    axs[0].grid(False)
-
-    axs[1].imshow(out)
-    axs[1].set_title('prediction image-out.png')
-    axs[1].grid(False)
-
-    print(out)
-    print(out.shape)
 
 if __name__ == '__main__':
     main() 
