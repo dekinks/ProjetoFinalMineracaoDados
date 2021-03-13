@@ -1,2 +1,0 @@
-model_checkpoint_path: "vgg_unet.9"
-all_model_checkpoint_paths: "vgg_unet.9"
