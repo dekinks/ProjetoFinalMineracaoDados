@@ -14,9 +14,9 @@ def atoi(text) :
 def natural_keys(text) :
     return [atoi(c) for c in re.split('(\d+)', text)]
 
-def segmentation_images(path,new_path, debug_test_num):
+def segmentation_images(path, new_path, debug_test_num):
     filenames = []
-    read_csv = pd.read_csv("class_dict_seg_original.csv",index_col=False,skipinitialspace=True)
+    read_csv = pd.read_csv("class_dict_seg_original.csv", index_col=False, skipinitialspace=True)
     read_csv.head()
      
     for root, dirnames, filenames in os.walk(path):
@@ -41,17 +41,17 @@ def segmentation_images(path,new_path, debug_test_num):
             for index, row  in read_csv.iterrows():
                 new_image[(image_rgb[:,:,0]==row.r)&
                           (image_rgb[:,:,1]==row.g)&
-                          (image_rgb[:,:,2]==row.b)]=np.array([index+1,index+1,index+1]).reshape(1,3)
+                          (image_rgb[:,:,2]==row.b)]=np.array([index+1, index+1, index+1]).reshape(1,3)
 
             new_image = new_image[:,:,0]
             output_filename = new_path+f+'.png'
-            cv2.imwrite(output_filename,new_image)
-            print('writing file: ',output_filename)
+            cv2.imwrite(output_filename, new_image)
+            print('writing file: ', output_filename)
             
         else:
             print('no file')
         
-    print("number of files written: ",count)
+    print("number of files written: ", count)
 
 if __name__ == '__main__':
     main() 
