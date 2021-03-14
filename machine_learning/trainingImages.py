@@ -19,7 +19,6 @@ def learning():
             inp=input_image,
             out_fname="output/out" + str(i) + ".png"
         )
-        print(input_image)
 
 if __name__ == '__main__':
     main() 
