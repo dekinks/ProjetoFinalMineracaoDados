@@ -6,7 +6,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 def main():
-    segmentation_images("masks_images/","masks_images_semantic_result/",debug_test_num=100 )
+    segmentation_images("masks_images/","masks_images_semantic_result/",debug_test_num=150 )
 
 def atoi(text) : 
     return int(text) if text.isdigit() else text
