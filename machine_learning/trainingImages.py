@@ -6,7 +6,7 @@ def main():
 
 def learning():
     n_classes = 24
-    epochs = 1
+    epochs = 10
     model = vgg_unet(n_classes=n_classes, input_height=416, input_width=608)
     model.train( 
         train_images =  "original_images/",
