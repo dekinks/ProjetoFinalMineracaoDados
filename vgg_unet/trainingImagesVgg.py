@@ -14,15 +14,12 @@ def learning():
         train_annotations = "masks_images_semantic_result/",
         checkpoints_path = "vgg_unet" , epochs=epochs)
 
-    begin = time.time()
     for i in range(120):
         input_image = "original_images/" + str(i) + ".jpg"
         out = model.predict_segmentation(
             inp=input_image,
             out_fname="out" + str(i) + ".png"
         )
-    end = time.time()
-    print(begin - end) 
 
 if __name__ == '__main__':
     main() 
