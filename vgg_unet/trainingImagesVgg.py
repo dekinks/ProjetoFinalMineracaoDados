@@ -14,8 +14,8 @@ def learning():
         train_annotations = "masks_images_semantic_result/",
         checkpoints_path = "vgg_unet" , epochs=epochs)
 
-    for i in range(120):
-        input_image = "original_images/" + str(i) + ".jpg"
+    for i in range(60):
+        input_image = "prev_images/" + str(i) + ".jpg"
         out = model.predict_segmentation(
             inp=input_image,
             out_fname="out" + str(i) + ".png"
