@@ -85,7 +85,11 @@ def unet(pretrained_weights = None,input_size = (255,255,1)):
 
     return model
 
-def cnnSegmentation(): 
+def cnnSegmentation():
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    tf.config.experimental.set_virtual_device_configuration(gpus[0], [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=2048)])
+    logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+
     m = unet()
     opt = Adam(lr=1E-5, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
 
