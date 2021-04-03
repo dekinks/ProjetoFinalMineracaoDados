@@ -6,7 +6,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 def main():
-    segmentation_images("30epocas/","new_images_semantic_result/",debug_test_num=60 )
+    segmentation_images("masks_images/","masks_images_semantic_result/",debug_test_num=60 )
 
 def atoi(text) : 
     return int(text) if text.isdigit() else text
@@ -16,7 +16,7 @@ def natural_keys(text) :
 
 def segmentation_images(path, new_path, debug_test_num):
     filenames = []
-    read_csv = pd.read_csv("class_dict_seg_modified.csv", index_col=False, skipinitialspace=True)
+    read_csv = pd.read_csv("class_dict_seg_original.csv", index_col=False, skipinitialspace=True)
     read_csv.head()
      
     for root, dirnames, filenames in os.walk(path):
