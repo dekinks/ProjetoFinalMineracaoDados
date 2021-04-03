@@ -1,0 +1,25 @@
+name, r, g, b
+unlabeled,0,0,0
+paved-area,183,244,155
+dirt,144,71,111
+grass,128,48,71
+gravel,50,158,75
+water,241,169,37
+rocks,126,162,193
+pool,244,104,161
+vegetation,31,133,226
+roof,204,47,7
+wall,170,272,0
+window,32,166,124
+door,94,100,148
+fence,222,181,51
+fence-pole,46,229,72
+person,149,154,55
+dog,56,139,154
+car,46,227,147
+bicycle,123,162,197
+tree,96,104,48
+bald-tree,133,16,95
+ar-marker,45,235,146
+obstacle,19,76,66
+conflicting,51,42,232
